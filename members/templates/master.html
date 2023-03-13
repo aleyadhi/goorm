@@ -3,7 +3,10 @@
 <html>
     <head>
         <title>{% block title %} {% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'mystyles.css' %}"> -->
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
         {% block css %} {% endblock %}
     </head>
     <body>
