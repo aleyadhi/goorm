@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="mycard">
+    <div class="list-group">
         <h1>
             All Members
         </h1>
         
         <ul>
             {% for x in mymembers %}
-            <li onclick="window.location = 'details/{{ x.slug }}'">{{ x.firstname }} {{ x.lastname }} </li>
+            <li class="list-group-item list-group-item-action" onclick="window.location = 'details/{{ x.slug }}'" style="display: list-item; cursor: pointer;">{{ x.firstname }} {{ x.lastname }} </li>
             {% endfor %}
         </ul>
     </div>

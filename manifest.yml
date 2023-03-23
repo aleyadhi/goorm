@@ -1,3 +1,5 @@
 ---
 applications:
-- name:
+ - name: MyTennisClub
+   random-route: true
+   memory: 128M

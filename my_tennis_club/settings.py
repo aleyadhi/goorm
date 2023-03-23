@@ -25,7 +25,7 @@ SECRET_KEY = '+r^e=)80d5)$ejqy32la+7v3i7p8jxc3^-=kd6jc4v02&2quf*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".run-ap-south1.goorm.io"]
+ALLOWED_HOSTS = [".run-ap-south1.goorm.io", ".mybluemix.net"]
 
 
 # Application definition
