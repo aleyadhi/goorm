@@ -4,6 +4,8 @@
     <head>
         <title>{% block title %} {% endblock %}</title>
         <!-- <link rel="stylesheet" href="{% static 'mystyles.css' %}"> -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         {% load bootstrap5 %}
         {% bootstrap_css %}
         {% bootstrap_javascript %}
@@ -11,17 +13,17 @@
     </head>
     <body>
         <div class="container">
-        <ul class="nav bg-info">
-        <li class="nav-item">
-            <a class="nav-link link-light" href="/">HOME</a>
-        </li>
-        <li class="nav-item">
-             <a class="nav-link link-light" href="/members">MEMBERS</a>
-        </li>
-        </ul>
-  {% block content %}
-  {% endblock %}
-</div>
+            <ul class="nav  bg-info">
+                <li class="nav-item">
+                    <a class="nav-link link-light" href="/">HOME</a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link link-light" href="/members">MEMBERS</a>
+                </li>
+            </ul>
+            {% block content %}
+            {% endblock %}
+        </div>
         
     </body>
 </html>

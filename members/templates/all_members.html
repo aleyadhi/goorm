@@ -5,16 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="list-group">
+    <div class="container p-5 mt-3 text-primary">
         <h1>
             All Members
         </h1>
         
-        <ul>
+        <div class="list-group  list-group-flush">
             {% for x in mymembers %}
-            <li class="list-group-item list-group-item-action" onclick="window.location = 'details/{{ x.slug }}'" style="display: list-item; cursor: pointer;">{{ x.firstname }} {{ x.lastname }} </li>
+            <a class="list-group-item list-group-item-primary" href = "details/{{ x.slug }}"><h3>{{ x.id }}</h3>  {{ x.firstname }} {{ x.lastname }} </a>
+            <button type="button" class="btn btn-info text-light" data-bs-toggle="collapse" data-bs-target="#m{{ x.id }}" >details</button>
+            <div id="m{{ x.id }}" class="collapse card border-info rounded-5">
+                <p class="card-text text-success">Phone Number: {{ x.phone}}</p>
+    
+                <p class="card-text text-success">Member Since: {{ x.joined_date}}</p>    
+            </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
         
         

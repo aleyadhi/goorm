@@ -5,12 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <div class="mycard">
-        <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+    <div class="card border-info rounded-5">
+        <div class="card-body">
+            <h1 class="card-title text-primary">{{ mymember.firstname }} {{ mymember.lastname }}</h1>
     
-        <p>Phone Number: {{ mymember.phone}}</p>
+            <p class="card-text text-success">Phone Number: {{ mymember.phone}}</p>
     
-        <p>Member Since: {{ mymember.joined_date}}</p>    
+            <p class="card-text text-success">Member Since: {{ mymember.joined_date}}</p>    
+        </div>
     </div>
     
         
